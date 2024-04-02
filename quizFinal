@@ -19,9 +19,10 @@ def getUser():
     '''gets user's name and ID number and validates ID number'''
     firstName = input("Enter first name: ")
     lastName = input("Enter last name: ")
-    idNum = input("Enter your ID: ")
+    idChar = input("Enter the Character portion of your ID(this is 'A')")
+    idNum = input("Enter your ID Numbers: ")    
     count = 1
-    invalidID = (len(idNum) > 6 or len(idNum) < 6 or '0' in idNum)
+    invalidID = (idChar !='A' or len(idNum) > 6 or len(idNum) < 6 or '0' in idNum)
     while invalidID and count < 3:
         idNum = input('Invalid ID. Try again: ')
         count += 1
